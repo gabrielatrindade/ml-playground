@@ -1,0 +1,72 @@
+# Learning about metrics to evaluate the Machine Learning algorithms performance.
+
+Classification accuracy is the most used metric for measure the performance of our model, however it's not enough to truly judge our model.
+
+
+# Classification metrics
+
+    - Classification accuracy :
+a.k.a accuracy. Ratio of (number of correct predictions) to (the total number of predictions made).
+It works well only if there are equal number of samples belonging to each class.
+Consider to have a train_set with much more data about A than B. If my test has the same shape it'll return a good accuracy, because it'll make good predictions on A. But if my test has more class B than A, probably the accuracy score will drop, my model doesn't learn too much about B.
+
+    - Logarithmic Loss (Log Loss) :
+works by penalising the false classifications. 
+It works well for multi-class classification. 
+The classifier must assign probability to each class for all the samples.
+
+    - Confusion Matrix :
+gives a matrix as output and describes the complete performance of the model.
+matrix contains : True Positives and True Negatives (correct ones); 
+                  False Positives and False Negatives (wrong ones).
+Accuracy for the matrix is the (sum of the values lying across the “main diagonal”) / (the total number of predictions).
+Confusion Matrix forms the basis for the other types of metrics.
+
+    - Area Under Curve (AUC) :
+It's used for binary classification problem. It tells how much a model is capable of distinguishing between classes.
+AUC has a range of [0, 1]. The greater the value, the better is the performance of our model.
+~True Positive Rate (Sensitivity) : TP/(FN+TP) - the proportion of positive data points that are correctly considered as positive, with respect to all positive data points.
+~True Negative Rate (Specificity) : TN/(FP+TN) - the proportion of negative data points that are correctly considered as negative, with respect to all negative data points.
+~False Positive Rate : FP/(FP+TN) - the proportion of negative data points that are mistakenly considered as positive, with respect to all negative data points.
+TPR and FPR have values in the range [0, 1]. AUC is the area under the curve of plot FPR vs TPR at different points in [0, 1].
+
+    - F1 Score :
+The F1 score is a measure of a test’s accuracy. F1 Score is the harmonic mean between precision and recall. 
+The range for F1 Score is [0, 1]. 1 = (perfect precision and recall).
+It tells how precise your classifier is (how many instances it classifies correctly), as well as how robust it is (it does not miss a significant number of instances).
+The greater the F1 Score, the better is the performance of our model.
+~Precision : TP/(TP+FP). It's (the number of correct positive results) / (the number of positive results predicted). 
+attempts to answer “What proportion of positive identifications was actually correct?”. 
+precision_score(y_true, y_pred, average=None)
+~Recall : TP/(TP+FN). It's (the number of correct positive results) / (the number of all relevant samples (all samples that should have been identified as positive)). 
+attempts to answer “What proportion of actual positives was identified correctly?”.
+recall_score(y_true, y_pred, average=None)
+
+
+# Regression metrics
+
+    - R-Squared :
+R Squared is a measurement that tells what extent the proportion of variance in the dependent variable is explained by the variance in the independent variables.
+If the R² is 1.0 or 100%, that means that all movements of the dependent variable can be entirely explained by the movements of the independent variables.
+    
+    - Adjusted R-Squared :
+Every additional independent variable added to a model always increases the R² value — therefore, a model with several independent variables may seem to be a better fit even if it isn’t. The adjusted R² compensates for each additional independent variable and only increases if each given variable improves the model above what is possible by probability.    
+
+    - Mean Absolute Error (MAE) :
+it's the average of the difference between the original values and the predicted values. It gives the measure of how far the predictions were from the actual output.
+The greater the MAE, the worse is the performance of our model. It's negatively-oriented scores, which means lower values are better.
+
+    - Mean Squared Error (MSE) :
+is a measure of how close a fitted line is to data points. The smaller the Mean Squared Error, the closer the fit is to the data.
+it's similar to MAE, the only difference being that MSE takes the average of the square differences between the original values and the predicted values.
+The greater the MSE, the worse is the performance of our model.
+As, we take square of the error, the effect of larger errors become more pronounced than smaller error, hence the model can now focus more on the larger errors.
+this should be used over the MAE when you want to minimize large errors. 
+
+    - Root Mean Squared Error (RMSE) :
+It's negatively-oriented scores, which means lower values are better.
+The root-mean-square deviation (RMSD) or root-mean-square error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. The RMSD represents the square root of the second sample moment of the differences between predicted values and observed values or the quadratic mean of these differences.
+
+# References: 
+https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+https://towardsdatascience.com/how-to-evaluate-your-machine-learning-models-with-python-code-5f8d2d8d945b
