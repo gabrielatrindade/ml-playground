@@ -46,18 +46,21 @@ recall_score(y_true, y_pred, average=None)
 # Regression metrics
 
     - R-Squared :
-R Squared is a measurement that tells what extent the proportion of variance in the dependent variable is explained by the variance in the independent variables.
-If the R² is 1.0 or 100%, that means that all movements of the dependent variable can be entirely explained by the movements of the independent variables.
+R Squared is a measurement that represents the proportion of variance for the dependent variable that is explained by the variance in the independent variables. In other words, it tells how much a dependent variable varies relative to the independet variables.
+If R² is 0.8, it means 80% of the variation in the output variable is explained by the input variables. If the R² is 1.0 or 100%, that means that all movements of the dependent variable can be entirely explained by the movements of the independent variables.
+- Problem: it will either stay the same or increase with the addition of more independent variables, even if they don't have any relationship with the output variable.
     
     - Adjusted R-Squared :
-Every additional independent variable added to a model always increases the R² value — therefore, a model with several independent variables may seem to be a better fit even if it isn’t. The adjusted R² compensates for each additional independent variable and only increases if each given variable improves the model above what is possible by probability.    
+Every additional independent variable added to a model always increases the R² value — therefore, a model with several independent variables may seem to be a better fit even if it isn’t. The adjusted R² compensates for each additional independent variable and only increases if each given variable improves the model above what is possible by probability. It penalizes you for adding variables that don't improve your existing model. 
+If you are building Linear regression on multiple variables, it's always suggested that you use Adjusted R² to judge the goodness of the model. In case you only have one input variable, R² and Adjusted R² would be exactly the same.
 
     - Mean Absolute Error (MAE) :
-it's the average of the difference between the original values and the predicted values. It gives the measure of how far the predictions were from the actual output.
-The greater the MAE, the worse is the performance of our model. It's negatively-oriented scores, which means lower values are better.
+it's the average of the difference between the original values and the predicted values, without considering their direction (absolute value*). It gives the measure of how far the predictions are from the actual output.
+The greater MAE, the worse is the performance of our model. It's negatively-oriented scores, which means lower values are better.
+*If the absolute value is not taken (the signs of the errors are not removed), the average error becomes the Mean Bias Error (MBE).
 
     - Mean Squared Error (MSE) :
-is a measure of how close a fitted line is to data points. The smaller the Mean Squared Error, the closer the fit is to the data.
+is a measure of how close a fitted line is to data points. The smaller Mean Squared Error, the closer fit is to the data.
 it's similar to MAE, the only difference being that MSE takes the average of the square differences between the original values and the predicted values.
 The greater the MSE, the worse is the performance of our model.
 As, we take square of the error, the effect of larger errors become more pronounced than smaller error, hence the model can now focus more on the larger errors.
@@ -66,6 +69,8 @@ this should be used over the MAE when you want to minimize large errors.
     - Root Mean Squared Error (RMSE) :
 It's negatively-oriented scores, which means lower values are better.
 The root-mean-square deviation (RMSD) or root-mean-square error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. The RMSD represents the square root of the second sample moment of the differences between predicted values and observed values or the quadratic mean of these differences.
+It's the square root of the average of squared errors (MSE). The effect of each error on RMSE is proportional to the size of squared error, thus larger errors have a disproportionately large effect on RMSE. RMSE is sensitive to outliers.
+For an unbiased estimator, the RMSE is the square root of the variance (standard deviation).
 
 # References: 
 https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
