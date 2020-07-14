@@ -44,9 +44,9 @@ learnings from *Concepts* were added to each one, when it was applicable.
     
   #### Dataset
   - Independent variable: EmailText
-  - Dependent variable: Label
+  - Dependent variable: Label (spam or ham)
   
-  Future work: before counting the occurrence of each word, clean the messages: remove punctuation and abbreviation.
+  Future work: before counting the occurrence of each word, clean the messages: [ ] remove punctuation and [ ] abbreviation.
   <hr>
 
 </details>
@@ -71,14 +71,28 @@ learnings from *Concepts* were added to each one, when it was applicable.
 #### Regression
 
 <details>
-<summary> Boston House Price </summary>
-Boston House Price
+  
+  <br>
+  <summary> Boston House Price </summary>
+  🏡 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/boston_house_pricing">Boston House Price project</a> aims to <b>predict a housing price in Boston</b>. Since the target is a continuous value, this problem is classified as a Regression problem. In this case, the model will create a relationship between the 11 features and the target (dataset), and then be prepared to predict some Boston house prices through a given input. Some of these input/features are RM (average number of rooms per dwelling), AGE (proportion of owner-occupied units built prior to 1940), DIS (weighted distances to ﬁve Boston employment centers), RAD (index of accessibility to radial highways), and TAX (full-value property-tax rate per $10,000).
+    
+  #### Dataset
+  - Independent variables: CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT
+  - Dependent variable: target (boston house price)
+  
+  The dataset was provided by sklearn.datasets. <br>
+  Future work: - [ ] remove outliers and
+               - [ ] select only the features that contributes to the model training
+  <hr>
+
 </details>
+
 
 <details>
 <summary> Netflix Stock Prices </summary>
 test
 </details>
+
 
 <details>
 <summary> Pi </summary>
