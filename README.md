@@ -20,18 +20,22 @@ learnings from *Concepts* were added to each one, when it was applicable.
 #### Classification
 
 <details>
-<summary> Iris Species </summary>
+  
+  <summary> Iris Species </summary>
 
-<br>
-💐 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/iris_species">Iris Species project</a>
-has the aim to <b>classify iris flowers among three species</b> (setosa, versicolor, or virginica) from the variables: sepal length, sepal width, petal length, petal width. Each class (species) has 50 observations, which means there are 50 records for setosa, 50 for versicolor and 50 for virginica. But, as some outliers were identified (4) in this project, they were removed, reducing the observations and turning the dataset into an imbalanced one. One important question to ask is: Would it really be necessary to remove these outliers?
+  <br>
+  💐 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/iris_species">Iris Species project</a>
+  has the aim to <b>classify iris flowers among three species</b> (setosa, versicolor, or virginica) from the variables: sepal length, sepal width, petal length,
+  petal width. Each class (species) has 50 observations, which means there are 50 records for setosa, 50 for versicolor and 50 for virginica. But, as some
+  outliers were identified (4) in this project, they were removed, reducing the observations and turning the dataset into an imbalanced one. One important
+  question to ask is: Would it really be necessary to remove these outliers?
 
-#### Dataset
-- Independent variables: sepal length, sepal width, peta length, petal width.
-- Dependent variable: target (iris species)
+  #### Dataset
+  - Independent variables: sepal length, sepal width, peta length, petal width.
+  - Dependent variable: target (iris species)
 
-The dataset was provided by sklearn.datasets.
-<hr>
+  The dataset was provided by sklearn.datasets.
+  <hr>
 
 </details>
 
