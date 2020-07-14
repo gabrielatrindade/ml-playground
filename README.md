@@ -24,11 +24,7 @@ learnings from *Concepts* were added to each one, when it was applicable.
   <summary> Iris Species </summary>
 
   <br>
-  💐 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/iris_species">Iris Species project</a>
-  has the aim to <b>classify iris flowers among three species</b> (setosa, versicolor, or virginica) from the variables: sepal length, sepal width, petal length,
-  petal width. Each class (species) has 50 observations, which means there are 50 records for setosa, 50 for versicolor and 50 for virginica. But, as some
-  outliers were identified (4) in this project, they were removed, reducing the observations and turning the dataset into an imbalanced one. One important
-  question to ask is: Would it really be necessary to remove these outliers?
+  💐 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/iris_species">Iris Species project</a> has the aim to <b>classify iris flowers among three species</b> (setosa, versicolor, or virginica) from the variables: sepal length, sepal width, petal length, petal width. Each class (species) has 50 observations, which means there are 50 records for setosa, 50 for versicolor and 50 for virginica. But, as some outliers were identified (4) in this project, they were removed, reducing the observations and turning the dataset into an imbalanced one. One important question to ask is: Would it really be necessary to remove these outliers?
 
   #### Dataset
   - Independent variables: sepal length, sepal width, peta length, petal width.
@@ -39,15 +35,38 @@ learnings from *Concepts* were added to each one, when it was applicable.
 
 </details>
 
-<details>
-<summary> Spam Email </summary>
-test
-</details>
 
 <details>
-<summary> Titanic </summary>
-test
+  <summary> Spam Email </summary>
+  
+  <br>
+  📧 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/spam_email">Spam Email project</a> <b>classifies an email as spam (junk email) or ham (good email)</b> through email messages. The dataset contains 5572 observations, they are composed of Label (target) and EmailText (feature) variables. In this case, the EmailText will be converted into features that consist of the relative frequencies of occurring words. The model will then learn from the frequencies of each word in a spam or ham message.
+    
+  #### Dataset
+  - Independent variable: EmailText
+  - Dependent variable: Label
+  
+  Future work: before counting the occurrence of each word, clean the messages: remove punctuation and abbreviation.
+  <hr>
+
 </details>
+
+
+<details>
+  
+  <summary> Titanic </summary>
+  
+  <br>
+  🚢 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/titanic">Titanic project</a> is one of the most common classification problems for beginners. In this project, we need to build a predictive model that <b>classifies whether a passenger will survive or not</b> based on their information (i.e. name, age, gender, socioeconomic class, etc.). In this project, I dealt with data cleaning, visualization, and feature engineering, as well as machine learning. The dataset is composed of 11 features that they are not prepared to immediately apply a machine learning model. Going through these features, plotting some graphs, understanding and making decisions about how to clean and fill them, categorizing and encoding them, is part of the process. In addition, I applied and plotted some metrics I learned to evaluate the algorithms, such as ROC, AUC, and accuracy.
+  
+  #### Dataset
+  - Independent variables: PassengerId, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fire, Cabin, Embarked
+  - Dependent variable: Survived
+
+  <hr>
+
+</details>
+
 
 #### Regression
 
