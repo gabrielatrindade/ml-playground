@@ -89,8 +89,17 @@ learnings from *Concepts* were added to each one, when it was applicable.
 
 
 <details>
-<summary> Netflix Stock Prices </summary>
-test
+  
+  <br>
+  <summary> Netflix Stock Prices </summary>
+  📺 <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/netflix">Netflix Stock Prices project</a> predicts the stock price over the next 25 days. Although Netflix's stock prices dataset has 13 features, only the Close feature was the input to predict the next stock prices. The Close feature represents the closing price for each day. Our dependent variable is a copy of that feature moved 25 days ahead. In this way, we got the price of each day and the price for the 25th day ahead, and the algorithm learned from the relationship between these two values. <br>
+  A question I'm researching and trying to answer about this problem is: Does the Close feature violate the Autocorrelation Linear Regression assumption?
+
+  #### Dataset
+  - Independent variables: Close
+  - Dependent variable: Close+25days
+  <hr>
+  
 </details>
 
 
