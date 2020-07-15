@@ -81,8 +81,8 @@ learnings from *Concepts* were added to each one, when it was applicable.
   - Dependent variable: target (boston house price)
   
   The dataset was provided by sklearn.datasets. <br>
-  Future work: - [ ] remove outliers and
-               - [ ] select only the features that contributes to the model training
+  Future work: [ ] remove outliers and
+               [ ] select only the features that contributes to the model training
   <hr>
 
 </details>
