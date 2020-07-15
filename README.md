@@ -97,15 +97,23 @@ learnings from *Concepts* were added to each one, when it was applicable.
 
   #### Dataset
   - Independent variables: Close
-  - Dependent variable: Close+25days
+  - Dependent variable: 25th Close
   <hr>
   
 </details>
 
 
 <details>
-<summary> Pi </summary>
-test
+  
+  <br>
+  <summary> Pi </summary>
+  ➗ <a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/pi">Pi project</a> intends to <b>predict the next 10 digits of the Pi number</b>. The idea for this project came from the solution of the Netflix Stock Prices project. I failed in the solution but I learned somethings and I understood why this project cannot be solved in the same way as the Netflix one. Through a dataset with 1000 digits, I tried to predict the last 10 ones. The dependent variable was created based on the 10th digit ahead and the current one, but in reality there is no relationship between them. So the dependent variable was not dependent on the feature (current digit) and the algorithm couldn't learn from it. Some notes and visualization on the conclusion are provided.
+    
+  #### Dataset
+  - Independent variables: Digit
+  - Dependent variable: 10th Digit  
+  <hr>
+  
 </details>
 
 <details>
