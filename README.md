@@ -117,8 +117,20 @@ learnings from *Concepts* were added to each one, when it was applicable.
 </details>
 
 <details>
-<summary> Wine Quality </summary>
-test
+  
+  <br>
+  <summary> Wine Quality </summary>
+  🍷<a href="https://github.com/gabrielatrindade/ml-playground/tree/master/projects/pi">Wine Quality project</a> can be seen as classification or regression tasks. It will be a Regression problem if quality is a continuous variable but it can also be a Classification problem if the quality is a discrete variable (such as poor, good, and excellent). I decided to solve this problem as a Regression problem. <br>
+  The Wine Quality project aims to <b>predict the quality value given to a wine</b>. The dataset is composed of 11 features and the target, however, only 7 features are used to make the prediction. Through visualizations, I identified outliers. After analyzing the techniques to remove them (Z score and IQR), the IQR was used to do it. So the dataset was used to train the model.
+  
+  #### Dataset
+  - Independent variables: fixed acidity, volatile acidity, citric acid, chlorides, free sulfur dioxide, total sulfur dioxide, density, alcohol, residual sugar, pH, sulphates
+  - Dependent variable: quality
+  
+  The dataset was provided by <a href="https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009">Kaggle</a> and
+  <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality">UCI Machine Learning Repository</a>.
+  <hr>
+
 </details>
 
 ### 📝 boilerplate.ipynb
